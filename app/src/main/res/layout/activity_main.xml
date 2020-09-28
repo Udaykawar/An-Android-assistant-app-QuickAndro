@@ -11,11 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/background"
+        android:background="@color/white"
         android:weightSum="1">
 
         <include
             layout="@layout/toolbar_layout">
+
 
         </include>
 
@@ -27,13 +28,13 @@
             <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/tabs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:tabBackground="@color/colorAccen"
+                    app:tabBackground="@color/white"
                     app:tabMode="fixed"
                     app:tabGravity="fill" />
             </com.google.android.material.appbar.AppBarLayout>
@@ -47,15 +48,15 @@
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <ImageButton
-            android:layout_width="@dimen/runBtn_size"
-            android:layout_height="@dimen/runBtn_size"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
             android:id="@+id/button"
-            android:src="@drawable/run_btn"
-            android:background="@android:color/transparent"
+
+            android:src="@drawable/micnew"
+            android:background="@color/white"
             android:layout_gravity="center"
             android:gravity="center"
             android:scaleType="fitCenter"/>
-
         <com.google.android.gms.ads.AdView
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
@@ -81,6 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="165dp"
             android:src="@drawable/drawer_logo"/>
+
 
         <ListView
             android:layout_width="match_parent"

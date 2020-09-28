@@ -4,30 +4,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="@drawable/background2"
+    android:background="@color/colorAccent"
     tools:context="com.rarity.apps.quickandro.AboutActivity"
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/logo"
-        android:layout_weight="1" />
-
+        android:layout_centerVertical="true"
+        android:layout_weight="1"
+        android:src="@drawable/aayah" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email: apps.rarity@gmail.com"
+        android:text="Uday Kawar"
         android:id="@+id/email"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         android:textSize="20sp"
         android:typeface="monospace"
         android:textStyle="bold"
-        android:textColor="#000000"/>
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rishi Karanjkar"
+        android:id="@+id/email1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:textSize="20sp"
+        android:typeface="monospace"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kajal Kankariya"
+        android:id="@+id/email2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:textSize="20sp"
+        android:typeface="monospace"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Narayani Gadhve"
+        android:id="@+id/email3"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:textSize="20sp"
+        android:typeface="monospace"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+
+
 
 </LinearLayout>
