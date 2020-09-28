@@ -1,4 +1,4 @@
-package com.rarity.apps.quickandro.Modules;
+package com.rarity.apps.quickandro;
 
 import android.Manifest;
 import android.content.ActivityNotFoundException;
@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.support.v4.app.ActivityCompat;
+import androidx.core.app.ActivityCompat;
 
 public class Call {
 

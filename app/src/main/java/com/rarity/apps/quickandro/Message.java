@@ -1,4 +1,4 @@
-package com.rarity.apps.quickandro.Modules;
+package com.rarity.apps.quickandro;
 
 import android.Manifest;
 import android.content.Context;
@@ -6,13 +6,12 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.speech.RecognitionListener;
 import android.speech.SpeechRecognizer;
-import android.support.v4.app.ActivityCompat;
 import android.telephony.SmsManager;
-import com.rarity.apps.quickandro.MainActivity;
-import com.rarity.apps.quickandro.RunBackground;
-import com.rarity.apps.quickandro.RunBot;
+
+import androidx.core.app.ActivityCompat;
 
 public class Message implements RecognitionListener{
+
 
     private Context context;
     private RunBot bot;
@@ -20,6 +19,7 @@ public class Message implements RecognitionListener{
     private Contacts contacts;
     private boolean isMessage;
     private String message, receiver;
+    private  static final int MY_PERMISSIONS_REQUEST_SEND_SMS=0;
 
     public Message(Context context){
         this.context = context;
@@ -33,9 +33,9 @@ public class Message implements RecognitionListener{
         contacts = new Contacts(context);
     }
 
-    private void sendSMS(String message, String number) {
+    private void sendSMS(String message, String receiver) {
         SmsManager sm = SmsManager.getDefault();
-        sm.sendTextMessage(number, null, message, null, null);
+        sm.sendTextMessage(receiver, null, message, null, null);
     }
 
     public void sendMessage(){

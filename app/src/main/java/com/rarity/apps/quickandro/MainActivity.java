@@ -7,49 +7,39 @@ import android.graphics.PorterDuffColorFilter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
-import android.support.annotation.Nullable;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Gravity;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import com.rarity.apps.quickandro.Modules.Calculator;
-import com.rarity.apps.quickandro.Modules.Call;
-import com.rarity.apps.quickandro.Modules.Contacts;
-import com.rarity.apps.quickandro.Modules.Message;
-import com.rarity.apps.quickandro.Modules.OpenApp;
-import com.rarity.apps.quickandro.Modules.ProfileManager;
-import com.rarity.apps.quickandro.Modules.Search;
-import com.rarity.apps.quickandro.Modules.SetAlarm;
-import com.rarity.apps.quickandro.Modules.SpeakText;
-import com.rarity.apps.quickandro.Modules.Switch;
-import com.rarity.apps.quickandro.Modules.Temp_SpeechToText;
+
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 public class MainActivity extends AppCompatActivity implements RunBot//, RecognitionListener
 {
@@ -223,9 +213,7 @@ public class MainActivity extends AppCompatActivity implements RunBot//, Recogni
         {
             iad.show();
         }
-        else{
-            this.finish();
-        }
+        else this.finish();
     }
 
     @Override

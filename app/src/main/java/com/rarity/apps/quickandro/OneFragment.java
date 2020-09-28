@@ -4,7 +4,7 @@ package com.rarity.apps.quickandro;
  * Created by Premang on 06-Aug-16.
  */
         import android.os.Bundle;
-        import android.support.v4.app.Fragment;
+        import androidx.fragment.app.Fragment;
         import android.view.KeyEvent;
         import android.view.LayoutInflater;
         import android.view.View;
@@ -14,8 +14,6 @@ package com.rarity.apps.quickandro;
         import android.widget.EditText;
         import android.widget.ListView;
         import android.widget.TextView;
-
-        import com.rarity.apps.quickandro.Modules.Call;
 
         import java.util.ArrayList;
 

@@ -1,25 +1,53 @@
 
-package com.rarity.apps.quickandro.Modules;
+package com.rarity.apps.quickandro;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.provider.ContactsContract;
 
 import java.util.ArrayList;
 
+import androidx.core.app.ActivityCompat;
+
 public class Contacts {
 
+    public static  final int REQUEST_READ_CONTACTS=79;
     private Context context;
     private ArrayList<String> names, phoneNumbers;
     ArrayList<String> finallist = new ArrayList<String>();
     ArrayList<String> numberlist = new ArrayList<String>();
 
+
     public Contacts(Context context) {
-        this.context = context;
-        names = new ArrayList<String>();
-        phoneNumbers = new ArrayList<String>();
-        storeContactsData();
+        if(ActivityCompat.checkSelfPermission(context, Manifest.permission.READ_CONTACTS)==PackageManager.PERMISSION_GRANTED)
+        {
+            this.context = context;
+            names = new ArrayList<String>();
+            phoneNumbers = new ArrayList<String>();
+            storeContactsData();
+        }
+        else
+        {
+            requestPermission();
+        }
+
+
+    }
+
+    private void requestPermission() {
+        if(ActivityCompat.shouldShowRequestPermissionRationale((Activity) context, Manifest.permission.READ_CONTACTS))
+        {
+
+        }else
+        {
+            ActivityCompat.requestPermissions((Activity) context,new String[]{Manifest.permission.READ_CONTACTS},REQUEST_READ_CONTACTS);
+        }
+
+
     }
 
     private void storeContactsData() {

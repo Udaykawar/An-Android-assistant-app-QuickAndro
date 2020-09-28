@@ -1,4 +1,4 @@
-package com.rarity.apps.quickandro.Modules;
+package com.rarity.apps.quickandro;
 
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;

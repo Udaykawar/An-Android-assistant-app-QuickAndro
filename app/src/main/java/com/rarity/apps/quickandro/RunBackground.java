@@ -6,22 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PowerManager;
+import android.os.Vibrator;
 import android.speech.RecognitionListener;
 import android.speech.SpeechRecognizer;
 import android.widget.Toast;
-import android.os.Vibrator;
-
-import com.rarity.apps.quickandro.Modules.Calculator;
-import com.rarity.apps.quickandro.Modules.Call;
-import com.rarity.apps.quickandro.Modules.Contacts;
-import com.rarity.apps.quickandro.Modules.Message;
-import com.rarity.apps.quickandro.Modules.OpenApp;
-import com.rarity.apps.quickandro.Modules.ProfileManager;
-import com.rarity.apps.quickandro.Modules.Search;
-import com.rarity.apps.quickandro.Modules.SetAlarm;
-import com.rarity.apps.quickandro.Modules.SpeakText;
-import com.rarity.apps.quickandro.Modules.SpeechToText;
-import com.rarity.apps.quickandro.Modules.Switch;
 
 public class RunBackground extends Service implements RecognitionListener, RunBot {
 

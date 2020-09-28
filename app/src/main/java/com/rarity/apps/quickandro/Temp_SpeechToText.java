@@ -1,4 +1,4 @@
-package com.rarity.apps.quickandro.Modules;
+package com.rarity.apps.quickandro;
 
 import android.app.Activity;
 import android.app.Service;
