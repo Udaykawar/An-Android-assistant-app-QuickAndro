@@ -7,14 +7,6 @@
         android:id="@+id/share" />
 
     <item
-        android:title="About Us"
-        android:id="@+id/about"/>
-
-    <item
-        android:title="Rate Us"
-        android:id="@+id/rate"/>
-
-    <item
         android:title="Exit"
         android:id="@+id/exit"/>
 

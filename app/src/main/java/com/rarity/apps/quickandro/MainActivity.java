@@ -163,57 +163,9 @@ public class MainActivity extends AppCompatActivity implements RunBot//, Recogni
 
 //        String android_id = Settings.Secure.getString(getContentResolver(),
 //                Settings.Secure.ANDROID_ID);
-        adBanner = (AdView) findViewById(R.id.adBanner);
-        adReBan = new AdRequest.Builder().build();
-        adBanner.loadAd(adReBan);
 
-        adBanner.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-            }
-
-            @Override
-            public void onAdFailedToLoad(int i) {
-                super.onAdFailedToLoad(i);
-            }
-
-            @Override
-            public void onAdLeftApplication() {
-                super.onAdLeftApplication();
-            }
-
-            @Override
-            public void onAdOpened() {
-                super.onAdOpened();
-            }
-
-            @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
-            }
-        });
         //Toast.makeText(this,android_id,Toast.LENGTH_LONG).show();
 
-        interStitial();
-    }
-
-    public void interStitial(){
-        iad = new InterstitialAd(this);
-        iad.setAdUnitId("ca-app-pub-7145982136829866/6592822232");
-//        String android_id = Settings.Secure.getString(getContentResolver(),
-//                Settings.Secure.ANDROID_ID);
-        adReInt = new AdRequest.Builder().build();
-        iad.loadAd(adReInt);
-        //  Toast.makeText(MainActivity.this, "request started", Toast.LENGTH_SHORT).show();
-    }
-    public void showInterstitial()
-    {
-        if(iad.isLoaded())
-        {
-            iad.show();
-        }
-        else this.finish();
     }
 
     @Override
@@ -222,29 +174,10 @@ public class MainActivity extends AppCompatActivity implements RunBot//, Recogni
         outState.putStringArrayList("conversation", conversation);
     }
 
-    @Override
-    public void onPause() {
-        if (adBanner != null) {
-           adBanner.pause();
-       }
-
-        super.onPause();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (adBanner != null) {
-            adBanner.resume();
-        }
-    }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (adBanner != null) {
-            adBanner.destroy();
-        }
         StringBuilder sb=new StringBuilder();
         for(int i=0;i<conversation.size();i++){
             sb.append(conversation.get(i)).append(";,;");
@@ -283,13 +216,6 @@ public class MainActivity extends AppCompatActivity implements RunBot//, Recogni
                 intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_link));
                 intent.putExtra(Intent.EXTRA_SUBJECT, "QuickAndro app");
                 startActivity(Intent.createChooser(intent, null));
-                break;
-            case R.id.about:intent = new Intent(MainActivity.this, AboutActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.rate:intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("market://details?id=com.rarity.apps.quickandro"));
-                startActivity(intent);
                 break;
             case R.id.exit:
                 System.exit(0);
@@ -504,12 +430,6 @@ public class MainActivity extends AppCompatActivity implements RunBot//, Recogni
         viewPager.setAdapter(adapter);
     }
 
-    @Override
-    public void onBackPressed() {
-
-       super.onBackPressed();
-        showInterstitial();
-    }
 
 
     private class ViewPagerAdapter extends FragmentPagerAdapter {

@@ -14,6 +14,7 @@
 
     <string name="open_drawer">open</string>
     <string name="close_drawer">close</string>
+    <string name="todo">TODO</string>
 
     <string-array name="drawer_items">
         <item>Call</item>

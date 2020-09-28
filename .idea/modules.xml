@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/An-Android-assistant-app-QuickAndro.iml" filepath="$PROJECT_DIR$/An-Android-assistant-app-QuickAndro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/An-Android-assistant-app-QuickAndro-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/An-Android-assistant-app-QuickAndro-app.iml" group="An-Android-assistant-app-QuickAndro/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidStudioProjects-An-Android-assistant-app-QuickAndro.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidStudioProjects-An-Android-assistant-app-QuickAndro.iml" group="An-Android-assistant-app-QuickAndro" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
